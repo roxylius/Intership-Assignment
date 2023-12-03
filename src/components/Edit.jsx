@@ -79,6 +79,7 @@ const Edit = () => {
             <div className="tools">
                 <h2>FONT</h2>
                 <Select
+                    defaultValue={selectedOption.font}
                     onChange={(selected) => {
                         setSelectedOption((prev) => ({ ...prev, font: selected.value }));
                         handleDropdownChange({ menu: "fontFamily", value: selected.value });
@@ -88,6 +89,7 @@ const Edit = () => {
                 />
                 <h2>Color</h2>
                 <Select
+                    defaultValue={selectedOption.color}
                     onChange={(selected) => {
                         setSelectedOption((prev) => ({ ...prev, color: selected.value }));
                         handleDropdownChange({ menu: "color", value: selected.value });
@@ -97,6 +99,7 @@ const Edit = () => {
                 />
                 <h2>Size</h2>
                 <Select
+                    defaultValue={selectedOption.size}
                     onChange={(selected) => {
                         setSelectedOption((prev) => ({ ...prev, size: selected.value }));
                         handleDropdownChange({ menu: "fontSize", value: selected.value });
